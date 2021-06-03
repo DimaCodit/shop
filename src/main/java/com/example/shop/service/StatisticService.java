@@ -30,6 +30,7 @@ public class StatisticService {
                 .findAllByProductId(id)
                 .stream()
                 .map(order -> order.getConsumer())
+                .distinct()
                 .collect(Collectors.toList());
     }
 }
